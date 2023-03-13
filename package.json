@@ -25,12 +25,6 @@
     "publish:stable:major": "lerna publish major",
     "publish:unstable": "lerna publish prerelease --preid unstable --yes"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "lerna run lint --since origin/main --exclude-dependents"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",

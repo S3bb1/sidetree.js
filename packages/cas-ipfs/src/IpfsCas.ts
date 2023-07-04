@@ -70,7 +70,7 @@ export default class CasIpfs implements ICasService {
     try {
       const source = this.ipfs.get(address);
       const file = await source.next();
-      const bufferList: any = await concat(file.value.content);
+      const bufferList: any = await concat(file.value);
       const content = bufferList.copy();
       if (content) {
         return {

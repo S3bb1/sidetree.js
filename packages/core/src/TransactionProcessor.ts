@@ -566,7 +566,7 @@ export default class TransactionProcessor implements ITransactionProcessor {
       return [];
     }
 
-    const deactivateDidSuffixes = coreIndexFile.didUniqueSuffixes;
+    const deactivateDidSuffixes = coreIndexFile.deactivateDidSuffixes;
     const deactivateProofs = coreProofFile.deactivateProofs.map((proof) =>
       proof.signedDataJws.toCompactJws()
     );
